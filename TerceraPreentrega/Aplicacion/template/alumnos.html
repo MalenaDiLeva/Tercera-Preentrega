@@ -1,0 +1,26 @@
+{% extends 'padre.html' %}
+
+{% load static %}
+
+{% block contenido %}
+    
+    <main class="container">
+        <h1 class=" text-center title" style="color: blue;"><u><b>Alumnos</b></u> </h1>
+            <h2 class="text title" style="color:aquamarine"> <u><b>Listado de alumnos regulares:</b></u></h2>
+            <table class="table text-center">
+                <thead>
+                    <tr>
+                        <th>Nombre</th>
+                        <th>Apellido</th>
+                    </tr>        
+                </thead>
+                <tbody>
+                    {% for n in alumnos %}
+                        <tr>
+                            <td>{{n.nombre}}</td>
+                            <td>{{n.apellido}}</td>
+                        </tr>
+                    {% endfor %}
+                </tbody>
+        </main>
+{% endblock %}
